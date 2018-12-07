@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+
+		<h1><strong>Oneiro</strong></h1>
+
+<p>The Dream Generator</p>
+
+<a href="/dreams/">View All Dreams</a>
+<% if(currentUser && currentUser.isAdmin) { %> 
+ <p>
+           <form action="/dreams" method="GET" class="form-inline">
+               <div class="form-group">
+                   <input type="text" name="search" placeholder="dreams search..." class="form-control">
+                   <input type="submit" value="Search" class="btn btn-default">
+               </div>
+           </form>
+       </p>
+<% } %>
+	</div>
+
+
+
+<% include partials/footer %>
